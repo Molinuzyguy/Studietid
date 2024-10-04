@@ -10,12 +10,12 @@ body {
 
 }
 
-#toppmeny {
+#toppMeny {
     position: sticky;
     top: 0%;
 }
 
-#meny ul {
+#toppMeny ul {
     width: auto;
     height: 60px;
     top: 0%;
