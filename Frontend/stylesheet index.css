@@ -2,6 +2,9 @@
     --text: #000000;
     --background: #7fffd4;
     --background-contrast: #5cdab0;
+    --white: #fff;
+    --white-contrast: #ccc;
+    --red: #f44336;
 }
 
 body {
@@ -22,4 +25,63 @@ body {
     margin: 0%;
     padding-left: 0%;
     background-color: var(--background-contrast);
+}
+
+#toppmeny h4 {
+    text-align: center;
+    padding: 20px;
+}
+
+#container {
+    background-color: var(--background-contrast);
+}
+
+form {
+    border: 3px solid var(--background-contrast);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid var(--white-contrast);
+    box-sizing: border-box;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.tilbakeButton {
+    width: auto;
+    padding: 10px 18px;
+    background-color: var(--red);
+}
+
+.imgContainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.amalieSkram {
+    size: static;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.loginContainer {
+    padding: 16px;
+}
+
+span.pOrd {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.pOrd {
+        display: block;
+        float: none;
+    }
 }

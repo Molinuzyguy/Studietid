@@ -9,12 +9,33 @@
 <body>
     <div id="toppmeny">
         <ul>
-            <li><a href=""></a></li>
             <li><a href="#"><h4>Studietid</h4></a></li>
         </ul>
     </div>
-    <div id="tabeller">
-        
-    </div>
+
+    <form action="login" method="POST">
+        <div class="imgContainer">
+            <img src="AS logo.png" alt="amalieSkram" class="amalieSkram">
+        </div>
+
+        <div class="loginContainer">
+            <label for="bNavn"><b>Brukernavn</b></label>
+            <input type="text" placeholder="Oppgi Brukernavn" name="bNavn" required>
+
+            <label for="pOrd"><b>Passord</b></label>
+            <input type="text" placeholder="Oppgi passord" name="pOrd" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="husk"> Husk meg
+            </label>
+        </div>
+
+        <div class="loginContainer">
+            <button type="button" class="tilbakeButton">Tilbake</button>
+            <span class="pOrd">Glemt <a href="#">passord?</a></span>
+        </div>
+    </form>
+
 </body>
 </html>
