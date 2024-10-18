@@ -2,6 +2,8 @@
     --text: #000000;
     --background: #7fffd4;
     --background-contrast: #5cdab0;
+    --white: #fff;
+    --white-contrast: #ccc;
 }
 
 body {
@@ -22,4 +24,25 @@ body {
     margin: 0%;
     padding-left: 0%;
     background-color: var(--background-contrast);
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    list-style-type: none;
+}
+
+#toppMeny li a {
+    text-decoration: none;
+    color: var(--text);
+    width: 100%;
+    height: 100%;
+}
+
+#toppMeny li {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+}
+
+#toppMeny li:hover {
+    background-color: var(--background);
 }

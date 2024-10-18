@@ -9,33 +9,33 @@
 <body>
     <div id="toppmeny">
         <ul>
-            <li><a href="#"><h4>Studietid</h4></a></li>
+            <li><h4>Studietid</h4></li>
         </ul>
     </div>
 
-    <form action="login" method="POST">
+    <form id="login">
         <div class="imgContainer">
             <img src="AS logo.png" alt="amalieSkram" class="amalieSkram">
         </div>
 
         <div class="loginContainer">
             <label for="bNavn"><b>Brukernavn</b></label>
-            <input type="text" placeholder="Oppgi Brukernavn" name="bNavn" required>
+            <input type="text" placeholder="Oppgi Brukernavn">
 
             <label for="pOrd"><b>Passord</b></label>
-            <input type="text" placeholder="Oppgi passord" name="pOrd" required>
+            <input type="text" placeholder="Oppgi passord">
 
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="husk"> Husk meg
-            </label>
-        </div>
-
-        <div class="loginContainer">
-            <button type="button" class="tilbakeButton">Tilbake</button>
-            <span class="pOrd">Glemt <a href="#">passord?</a></span>
+            <button id="submit" onclick="login()">Login</button>
         </div>
     </form>
+
+    <script>
+
+        function login() {
+            window.location.href="studietid.html"
+        }
+
+    </script>
 
 </body>
 </html>
