@@ -1,0 +1,77 @@
+:root {
+    --text: #000000;
+    --background: #7fffd4;
+    --background-contrast-dark: #5cdab0;
+    --background-contrast-light: #aeffe4;
+    --white: #fff;
+    --white-contrast: #ccc;
+}
+
+body {
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#toppmeny {
+    position: sticky;
+    top: 0%;
+}
+
+#toppmeny ul {
+    width: auto;
+    height: 60px;
+    top: 0%;
+    margin: 0%;
+    padding-left: 0%;
+    background-color: var(--background-contrast);
+}
+
+#toppmeny h4 {
+    text-align: center;
+    padding: 20px;
+}
+
+#container {
+    background-color: var(--background-contrast);
+}
+
+form {
+    border: 3px solid var(--background-contrast);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid var(--white-contrast);
+    box-sizing: border-box;
+}
+
+#submit {
+    text-decoration: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgContainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.amalieSkram {
+    size: static;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.loginContainer {
+    padding: 16px;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--text);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet index.css">
+    <title>Studietid login</title>
+</head>
+<body>
+    <div id="toppmeny">
+        <ul>
+            <li><h4>Studietid</h4></li>
+        </ul>
+    </div>
+
+    <form id="login" action="/login" method="POST">
+        <div class="imgContainer">
+            <img src="AS logo.png" alt="amalieSkram" class="amalieSkram">
+        </div>
+
+        <div class="loginContainer">
+            <label for="bNavn"><b>E-post adresse</b></label>
+            <input type="text" name="bNavn" placeholder="Oppgi e-post adresse" required>
+
+            <label for="pOrd"><b>Passord</b></label>
+            <input type="password" name="pOrd" placeholder="Oppgi passord" required>
+
+            <button id="submit">Login</button>
+        </div>
+    </form>
+
+    <script>
+
+        const usernameInput = document.querySelector("input[name=bNavn]");
+        const passwordInput = document.querySelector("input[name=pOrd]");
+        const submitButton = document.getElementById('submit');
+
+        function toggleSubmitButton() {
+            if (usernameInput.value.trim() && passwordInput.value.trim()) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+
+        usernameInput.addEventListener('input', toggleSubmitButton);
+        passwordInput.addEventListener('input', toggleSubmitButton);
+
+        /*document.querySelector('#submit').addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "/studietid";
+        // });*/
+
+        toggleSubmitButton();
+
+    </script>
+
+</body>
+</html>

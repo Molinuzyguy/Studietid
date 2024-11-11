@@ -1,0 +1,6 @@
+Oppbevaring av eksempelpassord for testing
+
+geirbyrkjeland@gmail.com passord: Abc123
+olanormann@gmail.com passord: qwerty
+lisajobbmester@gmail.com passord: Passord01
+klauskatedral@gmail.com passord: 123456

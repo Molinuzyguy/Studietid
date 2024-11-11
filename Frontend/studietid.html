@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet studietid.css">
+    <title>Studietid</title>
+</head>
+<body>
+    <div id="toppMeny">
+        <ul>
+            <li id="brukernavnDisplay"><h4>Navn på elev</h4></li>
+            <li><a href="#"><h4>Studietid</h4></a></li>
+            <li><h4><a href="ny studietime.html">Ny studietime</a></h4></li>
+            <li><h4><a href="index.html">Logg ut</a></h4></li>
+        </ul>
+    </div>
+
+    <div id="hoved">
+        <h2>Studietimer</h2>
+
+        <div id="poengTavle">
+            <p>Du har <b>[NULL]</b> godkjente timer</p>
+        </div>
+
+        <div id="timeliste">
+            <div id="timelisteBeskrivelse">
+                <p><b>Registrerte timer:</b></p>
+            </div>
+
+            <div id="timelisteTall">
+                <p>jeg er kul</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        async function info() {
+            const response = await fetch("/brukerInfo");
+            const bruker = await response.json();
+
+            console.log(bruker.navn);
+            console.log(bruker);
+            document.getElementById("brukernavnDisplay").textContent = bruker.user.navn;
+            console.log(bruker.navn);
+            reloadCSS();
+        }
+
+        info();
+
+        // refreshCSS();
+
+        // refreshCSS = () => { 
+        //     let links = document.getElementsByTagName('link'); 
+        //     for (let i = 0; i < links.length; i++) { 
+        //         if (links[i].getAttribute('rel') == 'stylesheet') { 
+        //             let href = links[i].getAttribute('stylesheet studietid.css').split('?')[0];
+                      
+        //             let newHref = href + '?version='  
+        //                         + new Date().getMilliseconds(); 
+                      
+        //             links[i].setAttribute('href', newHref); 
+        //         } 
+        //     } 
+        // }
+
+        function reloadCSS() {
+            const links = document.getElementsByTagName("link");
+  
+        Array.from(links)
+            .filter(link => link.rel.toLowerCase() === 'stylesheet studietid.css' && link.href)
+            .forEach(link => {
+                const url = new URL(link.href, location.href);
+                url.searchParams.set('forceReload', Date.now());
+                link.href = url.href;
+            });
+        }
+
+    </script>
+
+</body>
+</html>
