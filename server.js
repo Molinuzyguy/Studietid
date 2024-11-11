@@ -61,9 +61,7 @@ app.get("/studietid", (req, res) => {
 
 app.get("/brukerInfo", (req, res) => {
     if (req.session.loggedIn) {
-        // console.log(req.session.bNavn);
         res.json({ user: req.session.user });
-        console.log();
     } else {
         res.status(401).json({ feil })
     }

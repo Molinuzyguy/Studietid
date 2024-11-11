@@ -29,7 +29,7 @@
             </div>
 
             <div id="timelisteTall">
-                <p>jeg er kul</p>
+                <p><i>Database ikke tilkoblet</i></p>
             </div>
         </div>
     </div>
@@ -39,42 +39,23 @@
         async function info() {
             const response = await fetch("/brukerInfo");
             const bruker = await response.json();
-
-            console.log(bruker.navn);
-            console.log(bruker);
+            
             document.getElementById("brukernavnDisplay").textContent = bruker.user.navn;
-            console.log(bruker.navn);
             reloadCSS();
         }
 
         info();
 
-        // refreshCSS();
-
-        // refreshCSS = () => { 
-        //     let links = document.getElementsByTagName('link'); 
-        //     for (let i = 0; i < links.length; i++) { 
-        //         if (links[i].getAttribute('rel') == 'stylesheet') { 
-        //             let href = links[i].getAttribute('stylesheet studietid.css').split('?')[0];
-                      
-        //             let newHref = href + '?version='  
-        //                         + new Date().getMilliseconds(); 
-                      
-        //             links[i].setAttribute('href', newHref); 
-        //         } 
-        //     } 
-        // }
-
         function reloadCSS() {
             const links = document.getElementsByTagName("link");
   
         Array.from(links)
-            .filter(link => link.rel.toLowerCase() === 'stylesheet studietid.css' && link.href)
-            .forEach(link => {
-                const url = new URL(link.href, location.href);
-                url.searchParams.set('forceReload', Date.now());
-                link.href = url.href;
-            });
+        .filter(link => link.rel.toLowerCase() === 'stylesheet studietid.css' && link.href)
+        .forEach(link => {
+            const url = new URL(link.href, location.href);
+            url.searchParams.set('forceReload', Date.now());
+            link.href = url.href;
+        });
         }
 
     </script>
